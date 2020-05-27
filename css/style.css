@@ -26,6 +26,10 @@ body {
   font-size: 1.9rem;
   font-weight: 400; }
 
+.heading-1 {
+  color: white;
+  font-size: 5rem; }
+
 .heading-2 {
   font-size: 4rem;
   font-style: italic;
@@ -70,17 +74,58 @@ body {
 .side-bar {
   background-color: #c69963;
   grid-row: 1 /-1;
-  grid-column: sidebar-start / sidebar-end; }
+  grid-column: sidebar-start / sidebar-end;
+  display: flex;
+  justify-content: center; }
+
+.nav__btn {
+  border: none;
+  width: 4.5rem;
+  height: .2rem;
+  background-color: white;
+  margin-top: 4rem; }
+  .nav__btn::before, .nav__btn::after {
+    content: "";
+    display: block;
+    border: none;
+    width: 4.5rem;
+    height: .2rem;
+    background-color: white; }
+  .nav__btn::before {
+    transform: translateY(-1.5rem); }
+  .nav__btn::after {
+    transform: translateY(1.3rem); }
 
 .header {
-  background-color: #101d2c;
+  background-image: linear-gradient(rgba(16, 29, 44, 0.95), rgba(16, 29, 44, 0.95)), url(../img/hero.jpeg);
+  background-size: cover;
+  background-position: center;
   grid-row: 1 / 2;
-  grid-column: full-start / col-end 6; }
+  grid-column: full-start / col-end 6;
+  padding: 8rem;
+  padding-top: 4rem;
+  display: grid;
+  grid-template-rows: 1fr min-content 6rem 1fr;
+  grid-template-columns: max-content;
+  grid-row-gap: 1.5rem;
+  justify-content: center; }
+  .header__logo {
+    height: 3rem;
+    justify-self: center; }
+  .header__btn {
+    align-self: start;
+    justify-self: start; }
+
+.seenon__text {
+  color: white; }
+
+.seenon__img {
+  height: 2rem; }
 
 .realtors {
   background-color: #B28451;
   grid-row: 1 / 2;
-  grid-column: col-start 6 / full-end; }
+  grid-column: col-start 7 / full-end; }
 
 .features {
   margin: 15rem 0;
