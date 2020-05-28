@@ -25,12 +25,31 @@
 }
 
 .seenon {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 5rem;
+    justify-items: center;
 
     &__text {
         color: white;
+
+        display: grid;
+        grid-template-columns: 1fr max-content 1fr;
+        column-gap: 2rem;
+        align-items: center;
+
+        &::before,
+        &::after {
+            content: "";
+            display: block;
+            height: .1rem;
+            background-color: currentColor;
+
+        }
     }
 
     &__img {
         height: 2rem;
+        filter: brightness(70%);
     }
 }
